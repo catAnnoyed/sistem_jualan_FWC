@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedai Pengisar Makanan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p class="header teks">Kedai Pengisar Makanan</p>
+    <ul class="menu teks">
+        <li id="page1"> <a href="index.html">Menu Utama</a></li>
+        <li id="page2"><a href="">Senarai Pangisar</a></li>
+        <li id="page3"><a href="logMasuk.html">Log Masuk</a></li>
+    </ul>
+    <div class="content">
+        <div class="btnUbahSaiz"> 
+            <button onclick="UbahSaizFont(5)">+</button>
+            <button onclick="UbahSaizFont(-5)">-</button>
+        </div>
+        <h1 class="teks"><b><u>Menarik hari ini</u></b></h1>
+        <div class="galeri teks">
+            <div class="item">
+                <a href="produk.html">
+                    <img src="img/tefalBlenderforcebl3171.jpeg" alt="Tefal blenderforce BL3171">
+                    <p>Tefal Blenderforce BL3171</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="img/toshibaBlender.jpeg" alt="Toshiba Blender">
+                    <p>Toshiba Blender</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="img/vitamix5300.jpeg" alt="Vitamix 5300">
+                    <p>Vitamix 5300</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>
+    <script src = "script.js"></script>
+    <script>
+        document.getElementById("page1").style.backgroundColor ="#1A472A";
+    </script>
+</body>
+</html> 
