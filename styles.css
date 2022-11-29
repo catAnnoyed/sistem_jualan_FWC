@@ -80,6 +80,7 @@ footer {
     line-height: 80px;
 }
 
+
 /*ubah saiz button*/
 .btnUbahSaiz {
     position: absolute;
@@ -167,4 +168,48 @@ footer {
 .borang input:invalid { 
     border: 2px solid firebrick;
 
+}
+
+
+/* page senarai*/
+.senarai{
+    padding: 20px 0px ;
+    text-align: center;
+}
+
+.senarai table, .senarai th, .senarai td {
+    border: 3px solid darkolivegreen;
+}
+
+.senarai table {
+    border-collapse: collapse;
+    min-width: 100%;
+    text-align: center;
+}
+
+.senarai img {
+    width: 150px;
+}
+
+.senarai form {
+    padding: 20px;
+    text-align: center;
+}
+
+.senarai button {
+    height: 30px;
+    width: 100px;
+    margin: 15px auto;
+}
+
+@media print {
+    .print {
+        display: none;
+    }
+}
+
+@media print {
+    .print_header{
+        font-size: 60px;
+    }
 }
