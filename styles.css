@@ -206,9 +206,6 @@ footer {
     .print {
         display: none;
     }
-}
-
-@media print {
     .print_header{
         font-size: 60px;
     }
