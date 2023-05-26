@@ -1,3 +1,20 @@
+<?php
+session_start();
+$status = $_SESSION['status'];
+if ($status == 'admin'){
+    $page = "produk_kemaskini.php";
+} else {
+    $page = "produk.php";
+}
+
+#berhubung dengan database
+require_once "inc/database.php";
+
+#mendapatkan 3 produk
+$sql = "SELECT * FROM PRODUK ORDER BY RAND() LIMIT 3;";
+$result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +29,7 @@
 <body>
     <p class="header teks">Kedai Pengisar Makanan</p>
     <ul class="menu teks">
-        <li id="page1"> <a href="index.html">Menu Utama</a></li>
-        <li id="page2"><a href="senarai_produk.html">Senarai Pangisar</a></li>
-        <li id="page3"><a href="logMasuk.html">Log Masuk</a></li>
+        <?php include 'INC/menu.php'?>
     </ul>
     <div class="content">
         <div class="btnUbahSaiz"> 
@@ -23,24 +38,21 @@
         </div>
         <h1 class="teks"><b><u>Menarik hari ini</u></b></h1>
         <div class="galeri teks">
+            <?php
+            while ($row = mysqli_fetch_assoc($result)){
+                $idProduk =$row['idProduk'];
+                $namaProduk =$row['namaProduk'];
+                $gambar =$row['gambar'];
+            ?>
             <div class="item">
-                <a href="produk.html">
-                    <img src="img/tefalBlenderforcebl3171.jpeg" alt="Tefal blenderforce BL3171">
-                    <p>Tefal Blenderforce BL3171</p>
+                <a href="<?php echo $page?>?idProduk=<?php echo $idProduk?>">
+                    <img src="img/<?php echo $gambar?>">
+                    <p class= "teks"><?php echo $namaProduk?></p>
                 </a>
             </div>
-            <div class="item">
-                <a href="produk.html">
-                    <img src="img/toshibaBlender.jpeg" alt="Toshiba Blender">
-                    <p>Toshiba Blender</p>
-                </a>
-            </div>
-            <div class="item">
-                <a href="produk.html">
-                    <img src="img/vitamix5300.jpeg" alt="Vitamix 5300">
-                    <p>Vitamix 5300</p>
-                </a>
-            </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>

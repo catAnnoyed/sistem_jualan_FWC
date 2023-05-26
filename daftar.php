@@ -11,9 +11,7 @@
 <body>
     <p class="header teks">Kedai Pengisar Makanan</p>
     <ul class="menu teks">
-        <li id="page1"><a href="index.html">Menu Utama</a></li>
-        <li id="page2"><a href="senarai_produk.html">Senarai Pangisar</a></li>
-        <li id="page3"><a href="logMasuk.html">Log Masuk</a></li>
+        <?php include 'INC/menu.php'?>
     </ul>
     <div class="content">
         <div class="btnUbahSaiz"> 
@@ -21,7 +19,7 @@
             <button onclick="UbahSaizFont(-5)">-</button>
         </div>
         <h1 class="teks"><b><u>Daftar</u></b></h1>
-        <form class="borang teks" action="" method="post">
+        <form class="borang teks" action="inc/daftar-inc.php" method="post">
             <label class="teks" for="idPengguna">ID Pengguna</label>
             <input type="text" name="idPengguna" id="idPengguna" required>
             <label class="teks" for="kataLaluan">Kata Laluan</label>

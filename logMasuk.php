@@ -10,9 +10,7 @@
 <body>
     <p class="header teks">Kedai Pengisar Makanan</p>
     <ul class="menu teks">
-        <li id="page1"><a href="index.html">Menu Utama</a></li>
-        <li id="page2"><a href="senarai_produk.html">Senarai Pangisar</a></li>
-        <li id="page3"><a href="logMasuk.html">Log Masuk</li></a>
+        <?php include 'INC/menu.php'?>
     </ul>
     <div class="content">
         <div class="btnUbahSaiz"> 
@@ -20,19 +18,19 @@
             <button onclick="UbahSaizFont(-5)">-</button>
         </div>
         <h1 class="title teks"><b><u>Log Masuk</u></b></h1>
-        <form class="borang teks" action="" method="post">
+        <form class="borang teks" action="inc/logMasuk-inc.php" method="post">
             <label for="idPengguna" class="teks">ID Pengguna</label>
             <input type="text" name="idPengguna" id="idPengguna" required>
             <label for="kataLaluan" class="teks">Kata Laluan</label>
             <input type="password" name="kataLaluan" id="kataLaluan"required>
             <button type="submit" name="logMasuk">Log Masuk</button>
         </form>
-        <p class="teks">Pengguna baharu?<a href= daftar.html>Click di sini</a> untuk mendaftar</p>
+        <p class="teks">Pengguna baharu?<a href= daftar.php>Click di sini</a> untuk mendaftar</p>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>
     <script src = "script.js"></script>
     <script>
-        document.getElementById("page3").style.backgroundColor ="#C3E8DE";
+        document.getElementById("page3").style.backgroundColor ="#1A472A";
     </script>
 </body>
 </html> 
