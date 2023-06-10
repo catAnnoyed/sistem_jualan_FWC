@@ -1,5 +1,11 @@
 <?php
 session_start();
+$status = $_SESSION['status'];
+if ($status == 'admin'){
+    $page = "produk_kemaskini.php";
+} else {
+    $page = "produk.php";
+}
 
 #berhubung dengan database
 require_once "inc/database.php";
@@ -40,7 +46,7 @@ $resullt = mysqli_query($conn, $sql);
                 $gambar =$row['gambar'];
             ?>
             <div class="item">
-                <a href="produk.php?idProduk=<?php echo $idProduk?>">
+            <a href="<?php echo $page?>?idProduk=<?php echo $idProduk?>">
                     <img src="img/<?php echo $gambar?>">
                     <p class= "teks"><?php echo $namaProduk?></p>
                 </a>

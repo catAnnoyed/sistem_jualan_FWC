@@ -1,7 +1,7 @@
 <?php
 session_start();
 if($_SESSION['status'] != 'admin'){
-    header("location: .../index.php?ralat=aksestidakdibenarkan");
+    header("location: ../sistem_jualan_FWC/index.php?ralat=aksestidakdibenarkan");
 }
 
 #berhubung dengan database
@@ -48,7 +48,7 @@ while ($row = mysqli_fetch_assoc($result)){
             <button onclick="UbahSaizFont(-5)">-</button>
         </div>
         <h1 class="teks"><b><u>Kemas Kini Produk</u></b></h1>
-        <form class="borang teks" action="INC/kemaskini-inc.php" method="post">
+        <form class="borang teks" action="INC/kemaskini-inc.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="idProduk" id="idProduk" value="<?php echo $idProduk?>">
             <input type="hidden" name="gambar" id="gambar" value="<?php echo $gambar?>">
             <label class="teks" form="namaProduk">Nama Produk</label>
@@ -56,11 +56,11 @@ while ($row = mysqli_fetch_assoc($result)){
             <label class="teks"form="jenama">Jenama</label>
             <input type="text" name="jenama" id="jenama" required value="<?php echo $jenama?>">
             <label class="teks" form="kapasiti">Kapasiti</label>
-            <input type="number" name="kapasiti" id="kapasiti" min="0.5" max="10" step=0.1 value="<?php echo $kapasiti?>">
-            <label class="teks" form="jenis_bekas">Jenis Bekas</label>
-            <input type="text" name="jenis_bekas" id="jenis_bekas" value="<?php echo $jenisBekas?>">
-            <label class="teks" form="harga">Harga</label>
-            <input type="number" name="harga" id="harga" min="1" max="99999" step="0.1" required value="<?php echo $hargaProduk?>">
+            <input type="number" name="kapasiti" id="kapasiti" min="0.5" max="10" step=0.01 value="<?php echo $kapasiti?>">
+            <label class="teks" form="jenisBekas">Jenis Bekas</label>
+            <input type="text" name="jenisBekas" id="jenisBekas" value="<?php echo $jenisBekas?>">
+            <label class="teks" form="hargaProduk">Harga</label>
+            <input type="number" name="hargaProduk" id="hargaProduk" min="1" max="99999" step="0.01" required value="<?php echo $hargaProduk?>">
             <label class="teks" form="gambarBaru">Gambar baru</label>
             <input type="file" name="gambarBaru" id="gambarBaru">
             <button type="submit" name="kemaskini">Kemaskini</button>

@@ -5,7 +5,7 @@ if (isset($_SESSION['status'])){
         <li id="page1"><a href="index.php">Menu Utama</a></li>
         <li id="page2"><a href="senarai_produk.php">Senarai Pengisar</a></li>
         <li id="page4"><a href="senarai_banding.html">Senarai Banding</a></li>
-        <li id="page5"><a href="senarai_pilihan.html">Senarai Pilihan</a></li>
+        <li id="page5"><a href="senarai_pilihan.php">Senarai Pilihan</a></li>
         <li id="page6"><a href="profile.html">Profil</a></li>
         <li id="page7"><a href="INC/logKeluar-inc.php">Log Keluar</a></li>
         ' ; 
@@ -13,7 +13,7 @@ if (isset($_SESSION['status'])){
         echo '
         <li id="page1"><a href="index.php">Menu Utama</a></li>
         <li id="page2"><a href="senarai_produk.php">Senarai Pengisar</a></li>
-        <li id="page8"><a href="tambah_produk.html">Tambah Produk</a></li>
+        <li id="page8"><a href="tambah_produk.php">Tambah Produk</a></li>
         <li id="page9"><a href="produk_kemaskini.php">Kemas Kini Produk</a></li>
         <li id="page10"><a href="senarai_pilihan_pengguna.php">Senarai Pilihan Pengguna</a></li>
         <li id="page7"><a href="INC/logKeluar-inc.php">Log Keluar</a></li>
