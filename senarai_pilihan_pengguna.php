@@ -79,13 +79,13 @@ $result = mysqli_query($conn, $sql);
                 }
                 ?>
             </table>
-            <button class="teks" onclick="window.print(); return false;" class="print">Cetak</button>
+            <button class="buttons" onclick="window.print(); return false;" class="print">Cetak</button>
         </div>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>
     <script src = "script.js"></script>
     <script>
-        document.getElementById("page10").style.backgroundColor ="#1A472A";
+        document.getElementById("page10").style.backgroundColor ="#3D432E";
     </script>
 </body>
 </html> 

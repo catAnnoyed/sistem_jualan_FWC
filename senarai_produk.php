@@ -59,7 +59,7 @@ $resullt = mysqli_query($conn, $sql);
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>
     <script src = "script.js"></script>
     <script>
-        document.getElementById("page2").style.backgroundColor ="#1A472A";
+        document.getElementById("page2").style.backgroundColor ="#3D432E";
     </script>
 </body>
 </html> 

@@ -63,13 +63,13 @@ while ($row = mysqli_fetch_assoc($result)){
             <input type="number" name="hargaProduk" id="hargaProduk" min="1" max="99999" step="0.01" required value="<?php echo $hargaProduk?>">
             <label class="teks" form="gambarBaru">Gambar baru</label>
             <input type="file" name="gambarBaru" id="gambarBaru">
-            <button type="submit" name="kemaskini">Kemaskini</button>
-            <button type="submit" name="hapus">Hapus</button>
+            <button class="buttons" type="submit" name="kemaskini">Kemaskini</button>
+            <button class="buttons" type="submit" name="hapus">Hapus</button>
         </form>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>
     <script>
-        document.getElementById("page9").style.backgroundColor ="#1A472A";
+        document.getElementById("page9").style.backgroundColor ="#3D432E";
     </script>
 </body>
 </html> 

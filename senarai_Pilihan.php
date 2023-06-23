@@ -2,7 +2,7 @@
 session_start();
 
 # berhubung dengan database
-require_once 'INC/database.php';
+require_once "INC/database.php";
 
 # mendapatkan produk pilihan pengguna
 $idPengguna = $_SESSION['idPengguna'];
@@ -47,37 +47,56 @@ $result = mysqli_query($conn, $sql);
 
                 <?php
                 while ($row = mysqli_fetch_assoc($result)){
+                    $idPembelian = $row['idPembelian'];
                     $idProduk = $row['idProduk'];
-                    $tarikh = date('d/m/Y', strtotime($row['tarikh']));
+                    $tarikh = date('d.m.Y', strtotime($row['tarikh']));
                     $masa = date('h:i A', strtotime($row['masa']));
-                }
+
+                    $sql2 ="SELECT * 
+                            FROM produk p
+                            INNER JOIN jenama j
+                            ON p.idJenama = j.idJenama
+                            WHERE idProduk = '$idProduk'";
+                    $result2 = mysqli_query($conn, $sql2);
+
+                    while ($row2 = mysqli_fetch_assoc($result2)) {
+                        $namaProduk = $row2['namaProduk'];
+                        $jenama = $row2['jenama'];
+                        $kapasiti = $row2['kapasiti'];
+                        $jenisBekas = $row2['jenisBekas'];
+                        $hargaProduk = $row2['hargaProduk'];
+                        $gambar = $row2['gambar'];
+                    }
                 ?>
 
                 <tr>
                     <td>
-                        <a href="product.html">
-                            <img src="img/tefalBlenderforcebl3171.jpeg" alt="">
+                        <a href="produk.php?idProduk=<?php echo $idProduk?>">
+                            <img src="img/<?php echo $gambar ?>" alt="<?php echo $namaProduk?>">
                         </a>
                     </td>
-                    <td>Tefal Blenderforce 3171</td>
-                    <td>Tefal</td>
-                    <td>2L</td>
-                    <td>plastik</td>
-                    <td>RM500</td>
+                    <td><?php echo $namaProduk?></td>
+                    <td><?php echo $jenama?></td>
+                    <td><?php echo $kapasiti?> L</td>
+                    <td><?php echo ucfirst($jenisBekas)?></td>
+                    <td>RM<?php echo $hargaProduk?></td>
                     <td>
-                        <p>29/11/2022</p>
-                        <p>12.30 p.m.</p>
-                        <a href="" class="print">Hapus</a>
+                        <p><?php echo $tarikh?></p>
+                        <p><?php echo $masa?></p>
+                        <a class="print" href="INC/hapus-inc.php?idPembelian=<?php echo $idPembelian?>">&#9940 Hapus</a>
                     </td>
                 </tr>
+                <?php 
+                }
+                ?>
             </table>
-            <button onclick="window.print(); return false;" class="print">Cetak</button>
+            <button class="buttons" onclick="window.print(); return false;" class="print">Cetak</button>
         </div>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>
     <script src = "script.js"></script>
     <script>
-        document.getElementById("page5").style.backgroundColor ="#1A472A";
+        document.getElementById("page5").style.backgroundColor ="#3D432E";
     </script>
 </body>
 </html> 

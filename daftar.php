@@ -30,7 +30,7 @@
             <input type="text" name="noTelefon" id="noTelefon" pattern="[0-9]+" title="Sila masukkan nombor sahaja">
             <label class="teks" for="emel" name="emel">E-mel</label>
             <input type="email" name="emel" id="emel">
-            <button type="submit" name="daftar">Daftar</button>
+            <button class="buttons" type="submit" name="daftar">Daftar</button>
         </form>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>

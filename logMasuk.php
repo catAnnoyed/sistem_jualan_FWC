@@ -23,14 +23,14 @@
             <input type="text" name="idPengguna" id="idPengguna" required>
             <label for="kataLaluan" class="teks">Kata Laluan</label>
             <input type="password" name="kataLaluan" id="kataLaluan"required>
-            <button type="submit" name="logMasuk">Log Masuk</button>
+            <button class="buttons" type="submit" name="logMasuk">Log Masuk</button>
         </form>
-        <p class="teks">Pengguna baharu?<a href= daftar.php>Click di sini</a> untuk mendaftar</p>
+        <p class="randomTexts">Pengguna baharu?<a href= daftar.php>Click di sini</a> untuk mendaftar</p>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>
     <script src = "script.js"></script>
     <script>
-        document.getElementById("page3").style.backgroundColor ="#1A472A";
+        document.getElementById("page3").style.backgroundColor ="#3D432E";
     </script>
 </body>
 </html> 

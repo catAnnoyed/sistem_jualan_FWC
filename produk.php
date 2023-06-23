@@ -18,7 +18,6 @@ while ($row = mysqli_fetch_assoc($result)){
     $jenama = $row['jenama'];
     $kapasiti =$row['kapasiti'];
     $jenisBekas = $row['jenisBekas'];
-    $gambar = $row['gambar'];
     $hargaProduk = $row['hargaProduk'];
     $gambar =$row['gambar'];
 }    
@@ -44,22 +43,23 @@ while ($row = mysqli_fetch_assoc($result)){
             <button onclick="UbahSaizFont(-5)">-</button>
         </div>
         <div class="produk teks">
-            <img src="img\<?php echo $gambar?>">
+            <img src="img\<?php echo $gambar?>" alt="<?php echo $namaProduk?>">
             <p class="namaProduk teks"><?php echo $namaProduk?></p>
             <p class="label teks">Jenama :</p> <p class="detail teks"><?php echo $jenama?></p>
-            <p class="label teks">kapsiti :</p><p class="detail teks"><?php echo $kapasiti?></p>
-            <p class="label teks">Jenis bekas :</p><p class="detail teks"><?php echo $jenisBekas?></p>
+            <p class="label teks">kapsiti :</p><p class="detail teks"><?php echo $kapasiti?> L</p>
+            <p class="label teks">Jenis bekas :</p><p class="detail teks"><?php echo ucfirst($jenisBekas)?></p>
             <p class="hargaProduk teks">RM<?php echo $hargaProduk?></p>
-            <form action="" method="post">
-                <button type="submit"name="banding">Banding</button>
-                <button type="submit" name="pilih">Pilih</button>
+            <form action="INC/produk-inc.php" method="post">
+                <input type="hidden" nama="idProduk" value="<?php echo $idProduk?>">
+                <button class="buttons brgbandingpilih" type="submit"name="banding">Banding</button>
+                <button class="buttons brgbandingpilih" type="submit" name="pilih">Pilih</button>
             </form>
         </div>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>
     <script src = "script.js"></script>
     <script>
-        document.getElementById("page2").style.backgroundColor ="#1A472A";
+        document.getElementById("page2").style.backgroundColor ="#3D432E";
     </script>
 </body>
 </html> 

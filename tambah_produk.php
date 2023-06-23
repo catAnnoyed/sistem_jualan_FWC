@@ -40,12 +40,12 @@ if($_SESSION['status'] != "admin"){
             <input type="number" name="hargaProduk" id="hargaProduk" min="10" max="9999" step="0.01" required>
             <label class="teks" form="gambar">Gambar</label>
             <input type="file" name="gambar" id="gambar" required>
-            <button type="submit" name="tambah">Tambah</button>
+            <button class="buttons" type="submit" name="tambah">Tambah</button>
         </form>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>
     <script>
-        document.getElementById("page8").style.backgroundColor ="#1A472A";
+        document.getElementById("page8").style.backgroundColor ="#3D432E";
     </script>
 </body>
 </html> 
