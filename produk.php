@@ -50,16 +50,13 @@ while ($row = mysqli_fetch_assoc($result)){
             <p class="label teks">Jenis bekas :</p><p class="detail teks"><?php echo ucfirst($jenisBekas)?></p>
             <p class="hargaProduk teks">RM<?php echo $hargaProduk?></p>
             <form action="INC/produk-inc.php" method="post">
-                <input type="hidden" nama="idProduk" value="<?php echo $idProduk?>">
-                <button class="buttons brgbandingpilih" type="submit"name="banding">Banding</button>
+                <input type="hidden" name="idProduk" value="<?php echo $idProduk?>">
+                <button class="buttons brgbandingpilih" type="submit" name="banding">Banding</button>
                 <button class="buttons brgbandingpilih" type="submit" name="pilih">Pilih</button>
             </form>
         </div>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>
     <script src = "script.js"></script>
-    <script>
-        document.getElementById("page2").style.backgroundColor ="#3D432E";
-    </script>
 </body>
 </html> 

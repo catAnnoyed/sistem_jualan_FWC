@@ -4,7 +4,7 @@ if(isset($_POST['banding'])){
     session_start();
 
     $idProduk = $_POST['idProduk'];
-    array_push($_SESSION['banding']);
+    array_push($_SESSION['banding'], $idProduk);
     echo"
     <script>
     alert('Produk dimasukkan dalam senarai banding');
@@ -19,7 +19,7 @@ if(isset($_POST['banding'])){
     date_default_timezone_set('Asia/Kuala_Lumpur');
 
     $idProduk = $_POST['idProduk'];
-    $idPengguna = $_POST['idPengguna'];
+    $idPengguna = $_SESSION['idPengguna'];
     $tarikh = date("Y-m-d");
     $masa = date("H:i:s");
 
@@ -33,35 +33,37 @@ if(isset($_POST['banding'])){
         echo"
         <script>
         alert('Produk telah ada dalam senarai banding');
-        window.location.href = '../senarai_banding.php';
+        window.location.href = '../senarai_pilihan.php';
         </script>
         ";
 
-    }
-
-    $sql2 = "INSERT INTO pembelian (idProduk,idPengguna,tarikh,masa)
+    } else {
+        $sql2 = "INSERT INTO pembelian (idProduk,idPengguna,tarikh,masa)
             VALUES(
             '$idProduk',
             '$idPengguna',
             '$tarikh',
             '$masa')";
-    $result = mysqli_query($conn,$sql2);
+        $result = mysqli_query($conn,$sql2);
 
-    if ($result) {
-        echo "
-        <script>
-        alert('Produk dimasukkan dalam senarai pilihan');
+        if ($result) {
+            echo "
+            <script>
+            alert('Produk dimasukkan dalam senarai pilihan');
             window.location.href = '../senarai_pilihan.php';
-        </script>
-        ";
-    } else {
-        echo "
-        <script>
-        alert('Produk gagal dimasukkan dalam senarai pilihan');
-        window.location.href = '../produk.php?idProduk=<?php echo $idProduk?>';
-        </script>
-        ";
+            </script>
+            ";
+        } else {
+            echo "
+            <script>
+            alert('Produk gagal dimasukkan dalam senarai pilihan');
+            window.location.href = '../produk.php?idProduk=<?php echo $idProduk?>';
+            </script>
+            ";
+        }
     }
+} else {
+    header("Location: ../index.php?ralat=aksestidakdibenarkan");
 }
 
 ?>

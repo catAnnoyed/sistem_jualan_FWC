@@ -14,7 +14,7 @@ if (isset($_POST['reset'])) {
     echo "
     <script>
         alert('Senarai banding telah dikosongkan');
-            window.location.href = '../senarai_produk.php';
+            window.location.href = '../sistem_jualan_FWC/senarai_produk.php';
     </script>
     ";
 }
@@ -85,7 +85,7 @@ if (isset($_POST['reset'])) {
                 }
                 ?>
             </table>
-            <form action="senarai_banding.php" method="post">
+            <form action="" method="post">
                 <button class="buttons" type="submit" name="reset">Reset</button>
             </form>
             <?php

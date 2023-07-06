@@ -286,15 +286,13 @@ input[type="file" i] {
     height: 20px;
     font-size: 15px;
     border-radius: 3px;
+    border-color: rgb(99, 104, 90);
 }
 
 .borang label{
     font-size: 20px;
 }
 
-.hapusbtn {
-    font-size: ;
-}
 
 .carian {
     margin: auto 50px auto 10px;
