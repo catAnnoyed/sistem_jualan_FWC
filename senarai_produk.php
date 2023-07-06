@@ -11,8 +11,22 @@ if ($status == 'admin'){
 require_once "inc/database.php";
 
 # mendapatkan semua produk
-$sql = "SELECT * FROM PRODUK;";
-$resullt = mysqli_query($conn, $sql);
+$namaProduk = "";
+$hargaMin = "0";
+$hargaMax =  "9999";
+
+if(isset($_POST['carian'])){
+    $namaProduk = $_POST['namaProduk'];
+    $hargaMin = $_POST['hargaMin'];
+    $hargaMax = $_POST['hargaMax'];
+}
+
+$sql = "SELECT *
+        FROM produk
+        WHERE namaProduk LIKE '%".$namaProduk."%' 
+        AND hargaProduk >= '$hargaMin'
+        AND hargaProduk <= '$hargaMax';";
+$result = mysqli_query($conn, $sql);
    
 ?>
 
@@ -38,9 +52,18 @@ $resullt = mysqli_query($conn, $sql);
             <button onclick="UbahSaizFont(-5)">-</button>
         </div>
         <h1 class="teks"><b><u>Senarai Pengisar</u></b></h1>
+        <form action="" class="borang" style="flex-direction:row; margin:0px;" method="post">
+            <label for="namaProduk">Nama Produk</label>
+            <input type="text" name="namaProduk" id="idProduk" class="carian">
+            <label for="hargaMin">Harga Minimum</label>
+            <input type="number" name="hargaMin" id="hargaMin" min="0" value="0" class="carian">
+            <label for="hargaMax">Harga Maximum</label>
+            <input type="number" name="hargaMax" id="hargaMax" min="0" value="9999" class="carian">
+            <button class="buttons" style="margin:auto;" type="submit" name="carian">Carian</button>
+        </form>
         <div class="galeri teks">
             <?php
-            while ($row = mysqli_fetch_assoc($resullt)){
+            while ($row = mysqli_fetch_assoc($result)){
                 $idProduk =$row['idProduk'];
                 $namaProduk =$row['namaProduk'];
                 $gambar =$row['gambar'];

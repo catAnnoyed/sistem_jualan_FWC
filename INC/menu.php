@@ -16,6 +16,7 @@ if (isset($_SESSION['status'])){
         <li id="page8"><a href="tambah_produk.php">Tambah Produk</a></li>
         <li id="page9"><a href="produk_kemaskini.php">Kemas Kini Produk</a></li>
         <li id="page10"><a href="senarai_pilihan_pengguna.php">Senarai Pilihan Pengguna</a></li>
+        <li id="page11"><a href="jenama.php">Senarai Jenama</a></li>
         <li id="page7"><a href="INC/logKeluar-inc.php">Log Keluar</a></li>
         ' ;
     }

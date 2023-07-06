@@ -58,7 +58,7 @@ h1 {
     padding: 15px;
 }
 
-#page1, #page2, #page3, #page4, #page5, #page6, #page7, #page8 , #page9, #page10 {
+#page1, #page2, #page3, #page4, #page5, #page6, #page7, #page8 , #page9, #page10, #page11 {
     padding-inline: 20px;
     border-radius: 15px;
 }  
@@ -175,7 +175,7 @@ footer {
 }
 
 
-/*log masuk*/
+/*borang*/
 .borang {
     display: flex;
     flex-direction: column;
@@ -200,7 +200,7 @@ footer {
     width: 120px;
     font-size: 15px;
     text-align: center;
-    margin-top: 15px 0px;
+    margin-top: 15px;
 }
 
 .borang input:invalid { 
@@ -230,6 +230,10 @@ input[type="file" i] {
 
 .senarai table, .senarai th, .senarai td {
     border: 3px solid darkolivegreen;
+}
+
+.senarai th {
+    font-weight: bolder;
 }
 
 .senarai table {
@@ -277,4 +281,21 @@ input[type="file" i] {
     color: white;
 }
 
+/*carian*/
+.carian input {
+    height: 20px;
+    font-size: 15px;
+    border-radius: 3px;
+}
 
+.borang label{
+    font-size: 20px;
+}
+
+.hapusbtn {
+    font-size: ;
+}
+
+.carian {
+    margin: auto 50px auto 10px;
+}
