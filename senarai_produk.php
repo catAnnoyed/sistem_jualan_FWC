@@ -1,10 +1,11 @@
 <?php
 session_start();
-$status = $_SESSION['status'];
-if ($status == 'admin'){
-    $page = "produk_kemaskini.php";
-} else {
-    $page = "produk.php";
+$page = 'produk.php';
+if (isset($_SESSION['status'])){
+    $status = $_SESSION['status'];
+    if ($status == "admin"){
+        $page = "produk_kemaskini.php";
+    } 
 }
 
 #berhubung dengan database

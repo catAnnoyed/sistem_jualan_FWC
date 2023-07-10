@@ -24,5 +24,7 @@ if(isset($_SESSION['status']) && $_GET['idPembelian']) {
             </script>
             ";
     }
+} else {
+    header("location: ../index.php?ralat=aksestidakdibenarkan");
 }
 ?>

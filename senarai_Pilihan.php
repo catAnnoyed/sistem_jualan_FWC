@@ -83,14 +83,15 @@ $result = mysqli_query($conn, $sql);
                     <td>
                         <p><?php echo $tarikh?></p>
                         <p><?php echo $masa?></p>
-                        <a class="print" href="INC/hapus-inc.php?idPembelian=<?php echo $idPembelian?>">&#9940 Hapus</a>
-                    </td>
+                        <a href="INC/hapus-inc.php?idPembelian=<?php echo $idPembelian?>">
+                            <button class="pilihanHapusbuttons print" type="button" name="">Hapus</button>
+                        </a>
                 </tr>
                 <?php 
                 }
                 ?>
             </table>
-            <button class="buttons" onclick="window.print(); return false;" class="print">Cetak</button>
+            <button class="buttons print" onclick="window.print(); return false;" class="print">Cetak</button>
         </div>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>

@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if($_SESSION['status'] != 'admin'){
+    header("location: ../sistem_jualan_FWC/index.php?ralat=aksestidakdibenarkan");
+}
+
 # berhubung dengan database
 require_once 'INC/database.php';
 
@@ -79,7 +83,7 @@ $result = mysqli_query($conn, $sql);
                 }
                 ?>
             </table>
-            <button class="buttons" onclick="window.print(); return false;" class="print">Cetak</button>
+            <button class="buttons print" onclick="window.print(); return false;">Cetak</button>
         </div>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>

@@ -50,7 +50,7 @@ $result = mysqli_query($conn, $sql);
                     <td>
                         <form style="padding:0px;" action="INC/jenama-inc.php" method="post">
                             <input type="hidden" name="idJenama" value="<?php echo $idJenama?>">
-                            <button class="hapusbtn buttons" type="submit" name="hapus">Hapus</button>
+                            <button class="pilihanHapusbuttons" type="submit" name="hapus">Hapus</button>
                         </form>
                     </td>
                 </tr>

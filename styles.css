@@ -214,7 +214,7 @@ footer {
 }
 
 input[type="file" i] {
-    background-color: rgba(99, 104, 90, 0.806);
+    background-color: rgba(99, 104, 90, 0.463);
     color: white;
     padding: 10px;
     margin: 5px 10px ;
@@ -234,6 +234,7 @@ input[type="file" i] {
 
 .senarai th {
     font-weight: bolder;
+    font-size: 110%;
 }
 
 .senarai table {
@@ -281,6 +282,19 @@ input[type="file" i] {
     color: white;
 }
 
+.pilihanHapusbuttons {
+    background-color: rgba(202, 179, 179, 0.21);
+    border: 2px solid rgb(145, 97, 97);
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+
+.pilihanHapusbuttons:hover {
+    background-color: rgb(145, 97, 97);
+    color: white;
+}
+
+
 /*carian*/
 .carian input {
     height: 20px;
@@ -288,11 +302,6 @@ input[type="file" i] {
     border-radius: 3px;
     border-color: rgb(99, 104, 90);
 }
-
-.borang label{
-    font-size: 20px;
-}
-
 
 .carian {
     margin: auto 50px auto 10px;
