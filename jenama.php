@@ -27,8 +27,8 @@ $result = mysqli_query($conn, $sql);
     </ul>
     <div class="content">
         <div class="btnUbahSaiz print"> 
-            <button onclick="UbahSaizFont(5)">+</button>
-            <button onclick="UbahSaizFont(-5)">-</button>
+            <button onclick="UbahSaizFont(2)">+</button>
+            <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <h1 class="teks"><b><u>Senarai Jenama</u></b></h1>
         <div class="senarai teks">
@@ -59,8 +59,8 @@ $result = mysqli_query($conn, $sql);
                 }
                 ?>
             </table>
-            <form action="INC/jenama-inc.php" method="post" class="borang" style="margin-top:80px" enctype="multipart/form-data">
-                <label for="failJenama">Senarai Jenama</label>
+            <form action="INC/jenama-inc.php" method="post" class="borang teks" style="margin-top:80px" enctype="multipart/form-data">
+                <label for="failJenama" class="teks">Senarai Jenama</label>
                 <input type="file" name="failJenama" id="failJenama" required>
                 <button class="buttons" style="width:200px; margin:10px auto;" type="submit" name="muatnaik">Muat Naik</button>
             </form>

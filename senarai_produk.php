@@ -49,16 +49,16 @@ $result = mysqli_query($conn, $sql);
     </ul>
     <div class="content">
         <div class="btnUbahSaiz"> 
-            <button onclick="UbahSaizFont(5)">+</button>
-            <button onclick="UbahSaizFont(-5)">-</button>
+            <button onclick="UbahSaizFont(2)">+</button>
+            <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <h1 class="teks"><b><u>Senarai Pengisar</u></b></h1>
         <form action="" class="borang" style="flex-direction:row; margin:0px;" method="post">
-            <label for="namaProduk">Nama Produk</label>
+            <label for="namaProduk" class="teks">Nama Produk</label>
             <input type="text" name="namaProduk" id="idProduk" class="carian">
-            <label for="hargaMin">Harga Minimum</label>
+            <label for="hargaMin" class="teks">Harga Minimum</label>
             <input type="number" name="hargaMin" id="hargaMin" min="0" value="0" class="carian">
-            <label for="hargaMax">Harga Maximum</label>
+            <label for="hargaMax" class="teks">Harga Maximum</label>
             <input type="number" name="hargaMax" id="hargaMax" min="0" value="9999" class="carian">
             <button class="buttons" style="margin:auto;" type="submit" name="carian">Carian</button>
         </form>

@@ -36,8 +36,8 @@ if (isset($_POST['reset'])) {
     </ul>
     <div class="content">
         <div class="btnUbahSaiz"> 
-            <button onclick="UbahSaizFont(5)">+</button>
-            <button onclick="UbahSaizFont(-5)">-</button>
+            <button onclick="UbahSaizFont(2)">+</button>
+            <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <h1 class="teks"><b><u>Senarai Banding</u></b></h1>
         <div class="senarai teks">
@@ -86,7 +86,7 @@ if (isset($_POST['reset'])) {
                 ?>
             </table>
             <form action="" method="post">
-                <button class="buttons" type="submit" name="reset">Reset</button>
+                <button class="buttons teks" type="submit" name="reset">Reset</button>
             </form>
             <?php
             } else {

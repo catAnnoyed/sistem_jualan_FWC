@@ -14,8 +14,8 @@
     </ul>
     <div class="content">
         <div class="btnUbahSaiz"> 
-            <button onclick="UbahSaizFont(5)">+</button>
-            <button onclick="UbahSaizFont(-5)">-</button>
+            <button onclick="UbahSaizFont(2)">+</button>
+            <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <h1 class="title teks"><b><u>Log Masuk</u></b></h1>
         <form class="borang teks" action="inc/logMasuk-inc.php" method="post">
@@ -25,7 +25,7 @@
             <input type="password" name="kataLaluan" id="kataLaluan"required>
             <button class="buttons" type="submit" name="logMasuk">Log Masuk</button>
         </form>
-        <p class="randomTexts">Pengguna baharu?<a href= daftar.php>Click di sini</a> untuk mendaftar</p>
+        <p class="randomTexts teks">Pengguna baharu?<a href= daftar.php>Click di sini</a> untuk mendaftar</p>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>
     <script src = "script.js"></script>

@@ -44,8 +44,8 @@ while ($row = mysqli_fetch_assoc($result)){
     </ul>
     <div class="content">
         <div class="btnUbahSaiz"> 
-            <button onclick="UbahSaizFont(5)">+</button>
-            <button onclick="UbahSaizFont(-5)">-</button>
+            <button onclick="UbahSaizFont(2)">+</button>
+            <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <h1 class="teks"><b><u>Kemas Kini Produk</u></b></h1>
         <form class="borang teks" action="INC/kemaskini-inc.php" method="post" enctype="multipart/form-data">
@@ -64,7 +64,7 @@ while ($row = mysqli_fetch_assoc($result)){
             <label class="teks" form="gambarBaru">Gambar baru</label>
             <input type="file" name="gambarBaru" id="gambarBaru">
             <button class="buttons" type="submit" name="kemaskini">Kemaskini</button>
-            <button class="buttons" type="submit" name="hapus">Hapus</button>
+            <button class="pilihanHapusbuttons" type="submit" name="hapus">Hapus</button>
         </form>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>

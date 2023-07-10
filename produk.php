@@ -39,8 +39,8 @@ while ($row = mysqli_fetch_assoc($result)){
     </ul>
     <div class="content">
         <div class="btnUbahSaiz"> 
-            <button onclick="UbahSaizFont(5)">+</button>
-            <button onclick="UbahSaizFont(-5)">-</button>
+            <button onclick="UbahSaizFont(2)">+</button>
+            <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <div class="produk teks">
             <img src="img\<?php echo $gambar?>" alt="<?php echo $namaProduk?>">
@@ -54,8 +54,8 @@ while ($row = mysqli_fetch_assoc($result)){
             ?>
             <form action="INC/produk-inc.php" method="post">
                 <input type="hidden" name="idProduk" value="<?php echo $idProduk?>">
-                <button class="buttons brgbandingpilih" type="submit" name="banding">Banding</button>
-                <button class="buttons brgbandingpilih" type="submit" name="pilih">Pilih</button>
+                <button class="buttons brgbandingpilih teks" type="submit" name="banding">Banding</button>
+                <button class="buttons brgbandingpilih teks" type="submit" name="pilih">Pilih</button>
             </form>
             <?php
             }

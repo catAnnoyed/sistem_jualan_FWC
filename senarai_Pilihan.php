@@ -29,8 +29,8 @@ $result = mysqli_query($conn, $sql);
     </ul>
     <div class="content">
         <div class="btnUbahSaiz print"> 
-            <button onclick="UbahSaizFont(5)">+</button>
-            <button onclick="UbahSaizFont(-5)">-</button>
+            <button onclick="UbahSaizFont(2)">+</button>
+            <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <h1 class="teks"><b><u>Senarai Pilihan</u></b></h1>
         <div class="senarai teks">

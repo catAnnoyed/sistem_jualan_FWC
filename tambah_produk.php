@@ -23,8 +23,8 @@ if($_SESSION['status'] != "admin"){
     </ul>
     <div class="content">
         <div class="btnUbahSaiz"> 
-            <button onclick="UbahSaizFont(5)">+</button>
-            <button onclick="UbahSaizFont(-5)">-</button>
+            <button onclick="UbahSaizFont(2)">+</button>
+            <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <h1 class="teks"><b><u>Tambah Produk</u></b></h1>
         <form class="borang teks" action="INC/tambah-inc.php" method="post" enctype="multipart/form-data">
