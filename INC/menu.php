@@ -22,7 +22,7 @@ if (isset($_SESSION['status'])){
 } else {
     echo '
     <li id="page1"><a href="index.php">Menu Utama</a></li>
-    <li id="page2"><a href="senarai_produk.php">Senarai Pangisar</a></li>
+    <li id="page2"><a href="senarai_produk.php">Senarai Pengisar</a></li>
     <li id="page3"><a href="logMasuk.php">Log Masuk</a></li>
 ' ;
 }
