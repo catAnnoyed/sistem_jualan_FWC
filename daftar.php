@@ -25,7 +25,7 @@
             <label class="teks" for="kataLaluan">Kata Laluan</label>
             <input type="password" name="kataLaluan" id="kataLaluan" minlength="8" maxlength="15" required>
             <label class="teks" for="nama" name="nama">Nama</label>
-            <input type="text" name="nama" id="nama" pattern="[A-Za-z]+" title="Sila guna huruf sahaja" required> 
+            <input type="text" name="nama" id="nama" pattern="[A-Za-z ]+" title="Sila guna huruf sahaja" required> 
             <label class="teks" for="noTelefon" name="noTelefon">NO Telefon</label>
             <input type="text" name="noTelefon" id="noTelefon" pattern="[0-9]+" title="Sila masukkan nombor sahaja">
             <label class="teks" for="emel" name="emel">E-mel</label>
