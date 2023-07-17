@@ -94,8 +94,7 @@ if (isset($_POST['reset'])) {
             <?php
             #dipaparkan jika tiada produk untuk dibanding
             } else {
-                echo "<p>Tiada produk untuk dibandingkan</p>
-                      <img src="duck.gif">";
+                echo "<p>Tiada produk untuk dibandingkan</p> <img src='img/duck.gif'>";
             }
             ?>
             
