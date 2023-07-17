@@ -23,7 +23,12 @@
             <label class="teks" for="idPengguna">ID Pengguna</label>
             <input type="text" name="idPengguna" id="idPengguna" required>
             <label class="teks" for="kataLaluan">Kata Laluan</label>
-            <input type="password" name="kataLaluan" id="kataLaluan" minlength="8" maxlength="15" required>
+            <input type="password" 
+                   name="kataLaluan" 
+                   id="kataLaluan" 
+                   pattern="[a-zA-Z0-9]{6,12}"
+                   oninvalid="this.setCustomValidity('Sila masukkan 6-12 aksara sahaja.')"
+                   oninput="this.setCustomValidity('')" required>
             <label class="teks" for="nama" name="nama">Nama</label>
             <input type="text" name="nama" id="nama" pattern="[A-Za-z ]+" title="Sila guna huruf sahaja" required> 
             <label class="teks" for="noTelefon" name="noTelefon">NO Telefon</label>

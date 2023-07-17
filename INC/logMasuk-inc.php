@@ -3,13 +3,16 @@
 if (isset($_POST['logMasuk'])){
     require_once 'database.php';
 
+    #mendapatkan id dan kata laluan
     $idPengguna = $_POST['idPengguna'];
     $kataLaluan = $_POST["kataLaluan"];
 
+    #mengenal pasti sama ada adalah admin
     $sql = "SELECT * FROM admin WHERE idAdmin = '$idPengguna'";
     $result = mysqli_query($conn,$sql);
     $rowCount = mysqli_num_rows($result);
     if($rowCount == 0) {
+        #mengenal pasti pengguna wujud
         $sql = "SELECT * FROM pengguna WHERE idPengguna = '$idPengguna'";
         $result = mysqli_query($conn,$sql);
         $rowCount = mysqli_num_rows($result);
@@ -27,6 +30,7 @@ if (isset($_POST['logMasuk'])){
         $status = 'admin';
     }
     while ($row = mysqli_fetch_assoc($result)){
+        #mengenal pasti kata laluan adalah betul
         $kataLaluanSebenar = $row['kataLaluan'];
         if ($kataLaluan == $kataLaluanSebenar){
             session_start();

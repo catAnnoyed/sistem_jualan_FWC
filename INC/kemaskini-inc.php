@@ -3,6 +3,7 @@
 if (isset($_POST['kemaskini'])){
     include_once 'database.php';
 
+    #mendapatkan maklumat produk
     $idProduk = $_POST['idProduk'];
     $namaProduk = $_POST['namaProduk'];
     $jenama = $_POST['jenama'];
@@ -47,6 +48,7 @@ if (isset($_POST['kemaskini'])){
 
         #echo"<script>console.log(\"DEBUG:$gambarMuatNaik,$gambar,$jenisFail,$lokasiGambar\");</script> ";
 
+        #memastikan fail jenis jpg atau png
         if ($jenisFail != "jpg" && $jenisFail != "jpeg" && $jenisFail != "png"){
             echo "
             <script>
@@ -55,6 +57,7 @@ if (isset($_POST['kemaskini'])){
             </script>
             ";
         } else {
+            #memuatnaik lokasi fail baru ke dalam pangkalan data
             $namaSementara = $_FILES['gambarBaru']['tmp_name'];
             $pindahGambar = move_uploaded_file($namaSementara,$lokasiGambar);
             $sql = "UPDATE produk 
@@ -73,13 +76,16 @@ if (isset($_POST['kemaskini'])){
 } elseif (isset($_POST['hapus'])){
     include_once 'database.php';
 
+    #mendapatkan maklumat produk
     $idProduk = $_POST['idProduk'];
     $gambar = $_POST['gambar'];
 
+    #menghapuskan produk dalam pangkalan data
     $sql = "DELETE FROM produk WHERE idProduk = $idProduk";
     $result = mysqli_query($conn,$sql);
 
     if ($result){
+        #menghapuskan gamber produk
         $file = '.../img/'. $gambar;
         unlink($file);
 

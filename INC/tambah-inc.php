@@ -3,6 +3,7 @@
 if (isset($_POST['tambah'])){
     require_once 'database.php';
 
+    #mendapatkan maklumat produk
     $namaProduk = $_POST['namaProduk'];
     $jenama = $_POST['jenama'];
     $kapasiti =$_POST['kapasiti'];
@@ -43,6 +44,7 @@ if (isset($_POST['tambah'])){
         $gambar = $namaProdukUnderscore . "." . $jenisFail;
         $lokasiGambar = $folderGambar . $gambar;
 
+        #memasikan fail jenis jpg dan png
         if ($jenisFail != "jpg" && $jenisFail != "jpeg" && $jenisFail != "png"){
             echo "
             <script>
@@ -51,6 +53,7 @@ if (isset($_POST['tambah'])){
             </script>
             ";
         } else {
+            #memasukkan lokasi gambar baru ke dalam database
             $namaSementara = $_FILES['gambar']['tmp_name'];
             $pindahGambar = move_uploaded_file($namaSementara,$lokasiGambar);
             $sql = "UPDATE produk 

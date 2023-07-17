@@ -34,6 +34,7 @@ $result = mysqli_query($conn, $sql);
         </div>
         <h1 class="teks"><b><u>Senarai Pilihan</u></b></h1>
         <div class="senarai teks">
+            <!--table senarai pilihan-->
             <table>
                 <tr>
                     <th>Gambar</th>
@@ -83,6 +84,7 @@ $result = mysqli_query($conn, $sql);
                     <td>
                         <p><?php echo $tarikh?></p>
                         <p><?php echo $masa?></p>
+                        <!--button hapus-->
                         <a href="INC/hapus-inc.php?idPembelian=<?php echo $idPembelian?>">
                             <button class="pilihanHapusbuttons print" type="button" name="">Hapus</button>
                         </a>
@@ -91,6 +93,7 @@ $result = mysqli_query($conn, $sql);
                 }
                 ?>
             </table>
+            <!--button print-->
             <button class="buttons print" onclick="window.print(); return false;" class="print">Cetak</button>
         </div>
     </div>

@@ -18,6 +18,7 @@
             <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <h1 class="title teks"><b><u>Log Masuk</u></b></h1>
+        <!--borang log masuk-->
         <form class="borang teks" action="inc/logMasuk-inc.php" method="post">
             <label for="idPengguna" class="teks">ID Pengguna</label>
             <input type="text" name="idPengguna" id="idPengguna" required>
@@ -25,6 +26,7 @@
             <input type="password" name="kataLaluan" id="kataLaluan"required>
             <button class="buttons" type="submit" name="logMasuk">Log Masuk</button>
         </form>
+        <!--Link untuk mendaftar pengguna baru-->
         <p class="randomTexts teks">Pengguna baharu?<a href= daftar.php>Click di sini</a> untuk mendaftar</p>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>

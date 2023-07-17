@@ -3,6 +3,7 @@
 if (isset($_POST['daftar'])){
     require_once 'database.php';
 
+    #mendapatkan maklumat
     $idPengguna = $_POST["idPengguna"];
     $kataLaluan = $_POST["kataLaluan"];
     $nama = $_POST["nama"];
@@ -12,6 +13,7 @@ if (isset($_POST['daftar'])){
     $sql = "SELECT * FROM pengguna WHERE idPengguna = '$idPengguna'";
     $result = mysqli_query($conn, $sql);
     $rowCount = mysqli_num_rows($result);
+    #memastikan tiada duplikasi
     if ($rowCount>0){
         echo "
         <script>
@@ -20,6 +22,7 @@ if (isset($_POST['daftar'])){
         </script>
         ";
     } else {
+        #masukkan data dalam pangkalan data
         $sql = "INSERT INTO pengguna 
                 VALUES (
                 '$idPengguna',
@@ -28,6 +31,8 @@ if (isset($_POST['daftar'])){
                 '$noTelefon',
                 '$emel')";
         $result = mysqli_query($conn, $sql);
+
+        #paparkan sama ada berjaya
         if($result){
             echo "
             <script>

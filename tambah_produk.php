@@ -1,5 +1,6 @@
 <?php
 session_start();
+#memastikan adalah admin
 if($_SESSION['status'] != "admin"){
     header("location: ../sistem_jualan_FWC/index.php?ralat=aksestidakdibenarkan");
   }
@@ -27,6 +28,7 @@ if($_SESSION['status'] != "admin"){
             <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <h1 class="teks"><b><u>Tambah Produk</u></b></h1>
+        <!--borang mendapatkan maklumat produk-->
         <form class="borang teks" action="INC/tambah-inc.php" method="post" enctype="multipart/form-data">
             <label class="teks" form="namaProduk">Nama Produk</label>
             <input type="text" name="namaProduk" id="namaProduk" required>

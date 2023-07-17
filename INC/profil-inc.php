@@ -3,12 +3,14 @@
 if (isset($_POST['kemasKini'])){
     require_once 'database.php';
 
+    #mendapatkan maklumat pengguna
     $idPengguna = $_POST['idPengguna'];
     $nama = $_POST['nama'];
     $kataLaluan = $_POST['kataLaluan'];
     $noTelefon = $_POST['noTelefon'];
     $email = $_POST['email'];
 
+    #mengemas kini makulumat pengguna
     $sql = "UPDATE pengguna 
             SET
                 kataLaluan = '$kataLaluan',
@@ -19,6 +21,7 @@ if (isset($_POST['kemasKini'])){
                 idPengguna = '$idPengguna'";
     $result = mysqli_query($conn,$sql);
 
+    #memaparkan sama ada berjaya
     if ($result){
         echo "
         <script>

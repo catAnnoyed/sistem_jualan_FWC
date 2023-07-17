@@ -3,6 +3,7 @@
 if(isset($_POST['banding'])){
     session_start();
 
+    #memasukkan produk dalam senarai banding
     $idProduk = $_POST['idProduk'];
     array_push($_SESSION['banding'], $idProduk);
     echo"
@@ -16,13 +17,16 @@ if(isset($_POST['banding'])){
     require_once 'database.php';
     session_start();
 
+    #menetapkan time zone
     date_default_timezone_set('Asia/Kuala_Lumpur');
 
+    #mendapatkan maklumat
     $idProduk = $_POST['idProduk'];
     $idPengguna = $_SESSION['idPengguna'];
     $tarikh = date("Y-m-d");
     $masa = date("H:i:s");
 
+    #memastikan produk tiada dalam senarai pilihan
     $sql = "SELECT *
             FROM pembelian 
             WHERE idProduk = '$idProduk' AND
@@ -38,6 +42,7 @@ if(isset($_POST['banding'])){
         ";
 
     } else {
+        #memasukkan maklumat ke dalam senarai pilihan
         $sql2 = "INSERT INTO pembelian (idProduk,idPengguna,tarikh,masa)
             VALUES(
             '$idProduk',
@@ -46,6 +51,7 @@ if(isset($_POST['banding'])){
             '$masa')";
         $result = mysqli_query($conn,$sql2);
 
+        #memaparkan sama ada berjaya
         if ($result) {
             echo "
             <script>

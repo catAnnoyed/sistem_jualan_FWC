@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+#memastikan adalah admin
 if($_SESSION['status'] != 'admin'){
     header("location: ../sistem_jualan_FWC/index.php?ralat=aksestidakdibenarkan");
 }
@@ -47,6 +47,7 @@ $result = mysqli_query($conn, $sql);
         </div>
         <h1 class="teks"><b><u>Senarai Pilihan Pengguna</u></b></h1>
         <div class="senarai teks">
+            <!--table senarai pilihan pengguna-->
             <table>
                 <tr>
                     <th>Gambar</th>
@@ -83,6 +84,7 @@ $result = mysqli_query($conn, $sql);
                 }
                 ?>
             </table>
+            <!--button print-->
             <button class="buttons print" onclick="window.print(); return false;">Cetak</button>
         </div>
     </div>

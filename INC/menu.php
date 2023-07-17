@@ -1,6 +1,7 @@
 <?php
 if (isset($_SESSION['status'])){
     if ($_SESSION['status'] == "pengguna"){
+        #menu pengguna
         echo '
         <li id="page1"><a href="index.php">Menu Utama</a></li>
         <li id="page2"><a href="senarai_produk.php">Senarai Pengisar</a></li>
@@ -10,6 +11,7 @@ if (isset($_SESSION['status'])){
         <li id="page7"><a href="INC/logKeluar-inc.php">Log Keluar</a></li>
         ' ; 
     } else if ($_SESSION['status'] == "admin") {
+        #menu admin
         echo '
         <li id="page1"><a href="index.php">Menu Utama</a></li>
         <li id="page2"><a href="senarai_produk.php">Senarai Pengisar</a></li>
@@ -20,6 +22,7 @@ if (isset($_SESSION['status'])){
         ' ;
     }
 } else {
+    #menu guest
     echo '
     <li id="page1"><a href="index.php">Menu Utama</a></li>
     <li id="page2"><a href="senarai_produk.php">Senarai Pengisar</a></li>

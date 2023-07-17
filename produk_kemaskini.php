@@ -1,5 +1,6 @@
 <?php
 session_start();
+#memastikan adalah admin
 if($_SESSION['status'] != 'admin'){
     header("location: ../sistem_jualan_FWC/index.php?ralat=aksestidakdibenarkan");
 }
@@ -48,6 +49,7 @@ while ($row = mysqli_fetch_assoc($result)){
             <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <h1 class="teks"><b><u>Kemas Kini Produk</u></b></h1>
+        <!--borang mendapatkan maklumat produk baru-->
         <form class="borang teks" action="INC/kemaskini-inc.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="idProduk" id="idProduk" value="<?php echo $idProduk?>">
             <input type="hidden" name="gambar" id="gambar" value="<?php echo $gambar?>">

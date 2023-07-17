@@ -1,5 +1,6 @@
 <?php
 session_start();
+#menentukan page produk atau page kemaskini
 $page = "produk.php";
 if (isset($_SESSION['status'])){
     $status = $_SESSION['status'];
@@ -40,11 +41,13 @@ $result = mysqli_query($conn, $sql);
         <h1 class="teks"><b><u>Menarik hari ini</u></b></h1>
         <div class="galeri teks">
             <?php
+            #ambil result
             while ($row = mysqli_fetch_assoc($result)){
                 $idProduk =$row['idProduk'];
                 $namaProduk =$row['namaProduk'];
                 $gambar =$row['gambar'];
             ?>
+            <!--mempaparkan maklumat-->
             <div class="item">
                 <a href="<?php echo $page?>?idProduk=<?php echo $idProduk?>">
                     <img src="img/<?php echo $gambar?>">

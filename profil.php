@@ -40,6 +40,7 @@ while($row = mysqli_fetch_assoc($result)){
             <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <h1 class="teks"><b><u>Kemas Kini Maklumat Pengguna</u></b></h1>
+        <!--borang untuk mendapatkan maklumat pengguna yang baru-->
         <form class="borang teks" action="INC/profil-inc.php" method="post">
             <label class="teks" for="idPengguna">ID Pengguna</label>
             <input type="text" name="idPengguna" id="idPengguna" readonly value="<?php echo $idPengguna?>">

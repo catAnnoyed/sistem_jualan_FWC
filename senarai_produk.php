@@ -53,6 +53,7 @@ $result = mysqli_query($conn, $sql);
             <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <h1 class="teks"><b><u>Senarai Pengisar</u></b></h1>
+        <!--untuk carian-->
         <form action="" class="borang" style="flex-direction:row; margin:0px;" method="post">
             <label for="namaProduk" class="teks">Nama Produk</label>
             <input type="text" name="namaProduk" id="idProduk" class="carian">
@@ -69,6 +70,7 @@ $result = mysqli_query($conn, $sql);
                 $namaProduk =$row['namaProduk'];
                 $gambar =$row['gambar'];
             ?>
+            <!--paparkan produk-->
             <div class="item">
             <a href="<?php echo $page?>?idProduk=<?php echo $idProduk?>">
                     <img src="img/<?php echo $gambar?>">

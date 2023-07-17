@@ -1,5 +1,9 @@
 <?php
 session_start();
+#memastikan adalah admin 
+if($_SESSION['status'] != 'admin'){
+    header("location: ../sistem_jualan_FWC/index.php?ralat=aksestidakdibenarkan");
+}
 
 # berhubung dengan database
 require_once 'INC/database.php';
@@ -32,6 +36,7 @@ $result = mysqli_query($conn, $sql);
         </div>
         <h1 class="teks"><b><u>Senarai Jenama</u></b></h1>
         <div class="senarai teks">
+            <!--senarai jenama-->
             <table>
                 <tr>
                     <th>Bil</th>
@@ -48,6 +53,7 @@ $result = mysqli_query($conn, $sql);
                     <td><?php echo $bil?></td> 
                     <td><?php echo $jenama ?></td>
                     <td>
+                        <!--button hapus jenama-->
                         <form style="padding:0px;" action="INC/jenama-inc.php" method="post">
                             <input type="hidden" name="idJenama" value="<?php echo $idJenama?>">
                             <button class="pilihanHapusbuttons" type="submit" name="hapus">Hapus</button>
@@ -59,6 +65,7 @@ $result = mysqli_query($conn, $sql);
                 }
                 ?>
             </table>
+            <!--Borang memuat naik jenama baru-->
             <form action="INC/jenama-inc.php" method="post" class="borang teks" style="margin-top:80px" enctype="multipart/form-data">
                 <label for="failJenama" class="teks">Senarai Jenama</label>
                 <input type="file" name="failJenama" id="failJenama" required>

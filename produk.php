@@ -43,20 +43,26 @@ while ($row = mysqli_fetch_assoc($result)){
             <button onclick="UbahSaizFont(-2)">-</button>
         </div>
         <div class="produk teks">
+            <!--memaparkan butiran produk-->
             <img src="img\<?php echo $gambar?>" alt="<?php echo $namaProduk?>">
             <p class="namaProduk teks"><?php echo $namaProduk?></p>
             <p class="label teks">Jenama :</p> <p class="detail teks"><?php echo $jenama?></p>
             <p class="label teks">kapsiti :</p><p class="detail teks"><?php echo $kapasiti?> L</p>
             <p class="label teks">Jenis bekas :</p><p class="detail teks"><?php echo ucfirst($jenisBekas)?></p>
             <p class="hargaProduk teks">RM<?php echo $hargaProduk?></p>
+
             <?php
+            #memastikan pengguna sahaja yang dapat mengakses button pilih dan banding
             if (isset($_SESSION['status'])){
             ?>
+
+            <!--button pilih dan banding-->
             <form action="INC/produk-inc.php" method="post">
                 <input type="hidden" name="idProduk" value="<?php echo $idProduk?>">
                 <button class="buttons brgbandingpilih teks" type="submit" name="banding">Banding</button>
                 <button class="buttons brgbandingpilih teks" type="submit" name="pilih">Pilih</button>
             </form>
+
             <?php
             }
             ?>
