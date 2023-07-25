@@ -73,7 +73,7 @@ if (isset($_POST['reset'])) {
                 <!--masukkan maklumat ke dalam senarai-->
                 <tr>
                     <td>
-                        <a href="product.php?idProduk=<?php echo $idProduk?>">
+                        <a href="produk.php?idProduk=<?php echo $idProduk?>">
                             <img src="img/<?php echo $gambar ?>" alt="<?php echo $namaProduk ?>">
                         </a>
                     </td>
