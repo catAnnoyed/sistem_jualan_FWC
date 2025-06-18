@@ -1,6 +1,6 @@
 <?php
 
-$dbHost = "db.be-mons1.bengt.wasmernet.com";
+$dbHost = "db.be-mons1.bengt.wasmernet.com:3306";
 $dbUser = "34b261e3706e8000d7952bb0ffb2";
 $dbPass = "068534b2-61e3-7176-8000-458f753ee4d0";
 $dbName = "sis_jualan_fwc";
