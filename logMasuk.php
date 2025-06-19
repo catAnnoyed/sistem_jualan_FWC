@@ -27,7 +27,7 @@
             <button class="buttons" type="submit" name="logMasuk">Log Masuk</button>
         </form>
         <!--Link untuk mendaftar pengguna baru-->
-        <p class="randomTexts teks">Pengguna baharu?<a href= daftar.php>Click di sini</a> untuk mendaftar</p>
+        <p class="randomTexts teks">Pengguna baharu?<a href= daftar.php>Klik di sini</a> untuk mendaftar</p>
     </div>
     <footer class="teks">Hakcipta Terpelihara FWC 2022 &copy;</footer>
     <script src = "script.js"></script>
